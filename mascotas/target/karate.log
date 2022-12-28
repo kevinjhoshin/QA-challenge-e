@@ -283,3 +283,473 @@ classpath:pe/com/mascotas.feature:29
 4 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 4 < Server: Jetty(9.2.9.v20150224)
 {"code":200,"type":"unknown","message":"9223372036854629438"}
+15:34:27.940 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:34:27.945 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1672259667945
+15:34:28.853 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:34:28.890 [main] INFO  com.intuit.karate - [print] Agregar una nueva mascota 
+15:34:29.246 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 138
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.4.1)
+1 > Accept-Encoding: gzip,deflate
+{"photoUrls":["string"],"name":"doggie","id":0,"category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+
+15:34:30.069 [main] DEBUG com.intuit.karate - response time in milliseconds: 821
+1 < 200
+1 < Date: Wed, 28 Dec 2022 20:34:31 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"photoUrls":["string"],"name":"doggie","id":9223372036854630109,"category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+15:34:30.073 [main] INFO  com.intuit.karate - [print] Realiza la consulta de la mascota agregada 
+15:34:30.093 [main] DEBUG com.intuit.karate - request:
+2 > GET https://petstore.swagger.io/v2/pet/9223372036854630109
+2 > Host: petstore.swagger.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.4.1)
+2 > Accept-Encoding: gzip,deflate
+
+
+15:34:30.597 [main] DEBUG com.intuit.karate - response time in milliseconds: 503
+2 < 200
+2 < Date: Wed, 28 Dec 2022 20:34:32 GMT
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < Access-Control-Allow-Origin: *
+2 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+2 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+2 < Server: Jetty(9.2.9.v20150224)
+{"photoUrls":["string"],"name":"doggie","id":9223372036854630109,"category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+15:34:30.601 [main] INFO  com.intuit.karate - [print] Modificar el nombre de la mascota registrada 
+15:34:30.604 [main] DEBUG com.intuit.karate - request:
+3 > PUT https://petstore.swagger.io/v2/pet
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 149
+3 > Host: petstore.swagger.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.4.1)
+3 > Accept-Encoding: gzip,deflate
+{"photoUrls":["string"],"name":"doggie_modificado","id":0,"category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+
+15:34:31.100 [main] DEBUG com.intuit.karate - response time in milliseconds: 495
+3 < 200
+3 < Date: Wed, 28 Dec 2022 20:34:32 GMT
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Connection: keep-alive
+3 < Access-Control-Allow-Origin: *
+3 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+3 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+3 < Server: Jetty(9.2.9.v20150224)
+{"photoUrls":["string"],"name":"doggie_modificado","id":9223372036854630110,"category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+15:34:31.103 [main] INFO  com.intuit.karate - [print] Eliminar la mascota registrada 
+15:34:31.109 [main] DEBUG com.intuit.karate - request:
+4 > DELETE https://petstore.swagger.io/v2/pet/9223372036854630109
+4 > api_key: 123456
+4 > Host: petstore.swagger.io
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.4.1)
+4 > Accept-Encoding: gzip,deflate
+
+
+15:34:31.609 [main] DEBUG com.intuit.karate - response time in milliseconds: 500
+4 < 200
+4 < Date: Wed, 28 Dec 2022 20:34:33 GMT
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Connection: keep-alive
+4 < Access-Control-Allow-Origin: *
+4 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+4 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+4 < Server: Jetty(9.2.9.v20150224)
+{"code":200,"type":"unknown","message":"9223372036854630109"}
+15:34:32.355 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/pe/com/mascotas.feature
+15:38:11.617 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:38:11.621 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1672259891621
+15:38:12.451 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:38:12.490 [main] INFO  com.intuit.karate - [print] Agregar una nueva mascota 
+15:38:12.865 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 138
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.4.1)
+1 > Accept-Encoding: gzip,deflate
+{"photoUrls":["string"],"name":"doggie","id":0,"category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+
+15:38:13.660 [main] DEBUG com.intuit.karate - response time in milliseconds: 793
+1 < 200
+1 < Date: Wed, 28 Dec 2022 20:38:15 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"photoUrls":["string"],"name":"doggie","id":9223372036854630183,"category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+15:38:13.663 [main] INFO  com.intuit.karate - [print] Realiza la consulta de la mascota agregada 
+15:38:13.676 [main] DEBUG com.intuit.karate - request:
+2 > GET https://petstore.swagger.io/v2/pet/9223372036854630183
+2 > Host: petstore.swagger.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.4.1)
+2 > Accept-Encoding: gzip,deflate
+
+
+15:38:14.172 [main] DEBUG com.intuit.karate - response time in milliseconds: 495
+2 < 200
+2 < Date: Wed, 28 Dec 2022 20:38:15 GMT
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < Access-Control-Allow-Origin: *
+2 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+2 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+2 < Server: Jetty(9.2.9.v20150224)
+{"photoUrls":["string"],"name":"doggie","id":9223372036854630183,"category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+15:38:14.174 [main] INFO  com.intuit.karate - [print] Modificar el nombre de la mascota registrada 
+15:38:14.178 [main] DEBUG com.intuit.karate - request:
+3 > PUT https://petstore.swagger.io/v2/pet
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 154
+3 > Host: petstore.swagger.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.4.1)
+3 > Accept-Encoding: gzip,deflate
+{"photoUrls":["string"],"name":"doggie_modificado","id":"<id>","category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+
+15:38:14.673 [main] DEBUG com.intuit.karate - response time in milliseconds: 495
+3 < 500
+3 < Date: Wed, 28 Dec 2022 20:38:16 GMT
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Connection: keep-alive
+3 < Access-Control-Allow-Origin: *
+3 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+3 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+3 < Server: Jetty(9.2.9.v20150224)
+{"code":500,"type":"unknown","message":"something bad happened"}
+15:38:14.674 [main] ERROR com.intuit.karate - src/test/java/pe/com/mascotas.feature:69
+Then status 200
+status code was: 500, expected: 200, response time in milliseconds: 495, url: https://petstore.swagger.io/v2/pet, response: 
+{"code":500,"type":"unknown","message":"something bad happened"}
+src/test/java/pe/com/mascotas.feature:69
+15:38:15.290 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/pe/com/mascotas.feature
+15:39:02.764 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:39:02.768 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1672259942768
+15:39:03.576 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:39:03.615 [main] INFO  com.intuit.karate - [print] Agregar una nueva mascota 
+15:39:03.976 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 138
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.4.1)
+1 > Accept-Encoding: gzip,deflate
+{"photoUrls":["string"],"name":"doggie","id":0,"category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+
+15:39:04.695 [main] DEBUG com.intuit.karate - response time in milliseconds: 717
+1 < 200
+1 < Date: Wed, 28 Dec 2022 20:39:06 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"photoUrls":["string"],"name":"doggie","id":9223372036854630194,"category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+15:39:04.699 [main] INFO  com.intuit.karate - [print] Realiza la consulta de la mascota agregada 
+15:39:04.710 [main] DEBUG com.intuit.karate - request:
+2 > GET https://petstore.swagger.io/v2/pet/9223372036854630194
+2 > Host: petstore.swagger.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.4.1)
+2 > Accept-Encoding: gzip,deflate
+
+
+15:39:05.198 [main] DEBUG com.intuit.karate - response time in milliseconds: 486
+2 < 200
+2 < Date: Wed, 28 Dec 2022 20:39:06 GMT
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < Access-Control-Allow-Origin: *
+2 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+2 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+2 < Server: Jetty(9.2.9.v20150224)
+{"photoUrls":["string"],"name":"doggie","id":9223372036854630194,"category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+15:39:05.203 [main] INFO  com.intuit.karate - [print] Modificar el nombre de la mascota registrada 
+15:39:05.208 [main] DEBUG com.intuit.karate - request:
+3 > PUT https://petstore.swagger.io/v2/pet
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 154
+3 > Host: petstore.swagger.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.4.1)
+3 > Accept-Encoding: gzip,deflate
+{"photoUrls":["string"],"name":"doggie_modificado","id":"<id>","category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+
+15:39:05.689 [main] DEBUG com.intuit.karate - response time in milliseconds: 481
+3 < 500
+3 < Date: Wed, 28 Dec 2022 20:39:07 GMT
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Connection: keep-alive
+3 < Access-Control-Allow-Origin: *
+3 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+3 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+3 < Server: Jetty(9.2.9.v20150224)
+{"code":500,"type":"unknown","message":"something bad happened"}
+15:39:05.690 [main] ERROR com.intuit.karate - src/test/java/pe/com/mascotas.feature:69
+Then status 200
+status code was: 500, expected: 200, response time in milliseconds: 481, url: https://petstore.swagger.io/v2/pet, response: 
+{"code":500,"type":"unknown","message":"something bad happened"}
+src/test/java/pe/com/mascotas.feature:69
+15:39:06.292 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/pe/com/mascotas.feature
+15:40:08.660 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:40:08.666 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1672260008665
+15:40:09.464 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:40:09.498 [main] INFO  com.intuit.karate - [print] Agregar una nueva mascota 
+15:40:09.881 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 138
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.4.1)
+1 > Accept-Encoding: gzip,deflate
+{"photoUrls":["string"],"name":"doggie","id":0,"category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+
+15:40:10.656 [main] DEBUG com.intuit.karate - response time in milliseconds: 771
+1 < 200
+1 < Date: Wed, 28 Dec 2022 20:40:12 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"photoUrls":["string"],"name":"doggie","id":9223372036854630208,"category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+15:40:10.659 [main] INFO  com.intuit.karate - [print] Realiza la consulta de la mascota agregada 
+15:40:10.669 [main] DEBUG com.intuit.karate - request:
+2 > GET https://petstore.swagger.io/v2/pet/9223372036854630208
+2 > Host: petstore.swagger.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.4.1)
+2 > Accept-Encoding: gzip,deflate
+
+
+15:40:11.163 [main] DEBUG com.intuit.karate - response time in milliseconds: 493
+2 < 200
+2 < Date: Wed, 28 Dec 2022 20:40:12 GMT
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < Access-Control-Allow-Origin: *
+2 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+2 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+2 < Server: Jetty(9.2.9.v20150224)
+{"photoUrls":["string"],"name":"doggie","id":9223372036854630208,"category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+15:40:11.168 [main] INFO  com.intuit.karate - [print] Modificar el nombre de la mascota registrada 
+15:40:11.173 [main] DEBUG com.intuit.karate - request:
+3 > PUT https://petstore.swagger.io/v2/pet
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 155
+3 > Host: petstore.swagger.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.4.1)
+3 > Accept-Encoding: gzip,deflate
+{"photoUrls":["string"],"name":"doggie_modificado","id":"(#id)","category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+
+15:40:11.661 [main] DEBUG com.intuit.karate - response time in milliseconds: 487
+3 < 500
+3 < Date: Wed, 28 Dec 2022 20:40:13 GMT
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Connection: keep-alive
+3 < Access-Control-Allow-Origin: *
+3 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+3 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+3 < Server: Jetty(9.2.9.v20150224)
+{"code":500,"type":"unknown","message":"something bad happened"}
+15:40:11.663 [main] ERROR com.intuit.karate - src/test/java/pe/com/mascotas.feature:69
+Then status 200
+status code was: 500, expected: 200, response time in milliseconds: 487, url: https://petstore.swagger.io/v2/pet, response: 
+{"code":500,"type":"unknown","message":"something bad happened"}
+src/test/java/pe/com/mascotas.feature:69
+15:40:12.138 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/pe/com/mascotas.feature
+15:40:42.732 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:40:42.737 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1672260042736
+15:40:43.554 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:40:43.599 [main] INFO  com.intuit.karate - [print] Agregar una nueva mascota 
+15:40:43.950 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 138
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.4.1)
+1 > Accept-Encoding: gzip,deflate
+{"photoUrls":["string"],"name":"doggie","id":0,"category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+
+15:40:44.666 [main] DEBUG com.intuit.karate - response time in milliseconds: 713
+1 < 200
+1 < Date: Wed, 28 Dec 2022 20:40:46 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"photoUrls":["string"],"name":"doggie","id":9223372036854630211,"category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+15:40:44.669 [main] INFO  com.intuit.karate - [print] Realiza la consulta de la mascota agregada 
+15:40:44.679 [main] DEBUG com.intuit.karate - request:
+2 > GET https://petstore.swagger.io/v2/pet/9223372036854630211
+2 > Host: petstore.swagger.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.4.1)
+2 > Accept-Encoding: gzip,deflate
+
+
+15:40:45.182 [main] DEBUG com.intuit.karate - response time in milliseconds: 502
+2 < 200
+2 < Date: Wed, 28 Dec 2022 20:40:46 GMT
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < Access-Control-Allow-Origin: *
+2 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+2 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+2 < Server: Jetty(9.2.9.v20150224)
+{"photoUrls":["string"],"name":"doggie","id":9223372036854630211,"category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+15:40:45.187 [main] INFO  com.intuit.karate - [print] Modificar el nombre de la mascota registrada 
+15:40:45.190 [main] DEBUG com.intuit.karate - request:
+3 > PUT https://petstore.swagger.io/v2/pet
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 153
+3 > Host: petstore.swagger.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.4.1)
+3 > Accept-Encoding: gzip,deflate
+{"photoUrls":["string"],"name":"doggie_modificado","id":"#id","category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+
+15:40:45.692 [main] DEBUG com.intuit.karate - response time in milliseconds: 501
+3 < 500
+3 < Date: Wed, 28 Dec 2022 20:40:47 GMT
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Connection: keep-alive
+3 < Access-Control-Allow-Origin: *
+3 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+3 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+3 < Server: Jetty(9.2.9.v20150224)
+{"code":500,"type":"unknown","message":"something bad happened"}
+15:40:45.693 [main] ERROR com.intuit.karate - src/test/java/pe/com/mascotas.feature:69
+Then status 200
+status code was: 500, expected: 200, response time in milliseconds: 501, url: https://petstore.swagger.io/v2/pet, response: 
+{"code":500,"type":"unknown","message":"something bad happened"}
+src/test/java/pe/com/mascotas.feature:69
+15:40:46.282 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) src/test/java/pe/com/mascotas.feature
+15:41:09.032 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+15:41:09.036 [main] INFO  com.intuit.karate.Suite - backed up existing 'target\karate-reports' dir to: target\karate-reports_1672260069035
+15:41:09.845 [main] INFO  com.intuit.karate - karate.env system property was: null 
+15:41:09.884 [main] INFO  com.intuit.karate - [print] Agregar una nueva mascota 
+15:41:10.239 [main] DEBUG com.intuit.karate - request:
+1 > POST https://petstore.swagger.io/v2/pet
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 138
+1 > Host: petstore.swagger.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.4.1)
+1 > Accept-Encoding: gzip,deflate
+{"photoUrls":["string"],"name":"doggie","id":0,"category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+
+15:41:11.026 [main] DEBUG com.intuit.karate - response time in milliseconds: 785
+1 < 200
+1 < Date: Wed, 28 Dec 2022 20:41:12 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Server: Jetty(9.2.9.v20150224)
+{"photoUrls":["string"],"name":"doggie","id":9223372036854630212,"category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+15:41:11.029 [main] INFO  com.intuit.karate - [print] Realiza la consulta de la mascota agregada 
+15:41:11.039 [main] DEBUG com.intuit.karate - request:
+2 > GET https://petstore.swagger.io/v2/pet/9223372036854630212
+2 > Host: petstore.swagger.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.4.1)
+2 > Accept-Encoding: gzip,deflate
+
+
+15:41:11.545 [main] DEBUG com.intuit.karate - response time in milliseconds: 505
+2 < 200
+2 < Date: Wed, 28 Dec 2022 20:41:13 GMT
+2 < Content-Type: application/json
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < Access-Control-Allow-Origin: *
+2 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+2 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+2 < Server: Jetty(9.2.9.v20150224)
+{"photoUrls":["string"],"name":"doggie","id":9223372036854630212,"category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+15:41:11.550 [main] INFO  com.intuit.karate - [print] Modificar el nombre de la mascota registrada 
+15:41:11.554 [main] DEBUG com.intuit.karate - request:
+3 > PUT https://petstore.swagger.io/v2/pet
+3 > Content-Type: application/json; charset=UTF-8
+3 > Content-Length: 151
+3 > Host: petstore.swagger.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.4.1)
+3 > Accept-Encoding: gzip,deflate
+{"photoUrls":["string"],"name":"doggie_modificado","id":"0","category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+
+15:41:12.059 [main] DEBUG com.intuit.karate - response time in milliseconds: 504
+3 < 200
+3 < Date: Wed, 28 Dec 2022 20:41:13 GMT
+3 < Content-Type: application/json
+3 < Transfer-Encoding: chunked
+3 < Connection: keep-alive
+3 < Access-Control-Allow-Origin: *
+3 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+3 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+3 < Server: Jetty(9.2.9.v20150224)
+{"photoUrls":["string"],"name":"doggie_modificado","id":9223372036854630213,"category":{"name":"string","id":0},"tags":[{"name":"string","id":0}],"status":"available"}
+15:41:12.063 [main] INFO  com.intuit.karate - [print] Eliminar la mascota registrada 
+15:41:12.068 [main] DEBUG com.intuit.karate - request:
+4 > DELETE https://petstore.swagger.io/v2/pet/9223372036854630212
+4 > api_key: 123456
+4 > Host: petstore.swagger.io
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.4.1)
+4 > Accept-Encoding: gzip,deflate
+
+
+15:41:12.593 [main] DEBUG com.intuit.karate - response time in milliseconds: 525
+4 < 200
+4 < Date: Wed, 28 Dec 2022 20:41:14 GMT
+4 < Content-Type: application/json
+4 < Transfer-Encoding: chunked
+4 < Connection: keep-alive
+4 < Access-Control-Allow-Origin: *
+4 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+4 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+4 < Server: Jetty(9.2.9.v20150224)
+{"code":200,"type":"unknown","message":"9223372036854630212"}
+15:41:13.088 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/pe/com/mascotas.feature

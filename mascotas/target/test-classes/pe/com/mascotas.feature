@@ -45,7 +45,7 @@ Feature: Mantenimiento mascotas
     * def jsonBodyUpdate = 
     """
 		{
-		  "id": 0,
+		  "id": "0",
 		  "category": {
 		    "id": 0,
 		    "name": "string"

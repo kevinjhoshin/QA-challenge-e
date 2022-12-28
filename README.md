@@ -11,3 +11,5 @@ Automation Karate
 -Tambien se puede ejecutar dando click en MascotasRunner.java  y click Run As - JUnit Test
 
 -Adicional se adjunta el reporte de las ejecuciones en la carpeta Karate reports (Karate-summary.html)
+El reporte contiene Request, Body y estado de ejecución
+
